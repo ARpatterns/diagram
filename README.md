@@ -16,9 +16,9 @@
 
 ---
 
-```markdown
 **Request-Response Pattern**
 
+```markdown
  | on:command |  &rarr; | do:detect:feature |
  |---|---|---|
  
