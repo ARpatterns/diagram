@@ -1,4 +1,4 @@
-# AR Patterns Diagram
+# AR Pattern Diagram
 
 ## Test Diagram
 
