@@ -88,7 +88,7 @@ Dynamically loaded rules may be called hierarchically leading to nested blocks. 
 
 ---
 
-**Request-Response Pattern**
+**XYZ Pattern**
 
 ```markdown
  | on:command | &rarr; | do:detect:feature |
@@ -98,7 +98,7 @@ Dynamically loaded rules may be called hierarchically leading to nested blocks. 
 > | _on:detect_ | &rarr; | _do:execute:op_ |
 > |---|---|---|
 > 
-> > ``function('I found a chair', 'say')`  
+> > `function('I found a chair', 'say')`  
 > 
 ```
 
