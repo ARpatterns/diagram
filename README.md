@@ -2,6 +2,8 @@
 
 ## Introduction
 
+... todo
+
 ## Markdown Mappings for AR Pattern Diagrams
 
 ### ECA Block
@@ -52,14 +54,17 @@ Dynamically loaded rules may be called hierarchically leading to nested blocks. 
 >>> 'scene.3D' ✘
 > 
 
-
 ### Condition Symbol
 - always true: &rarr; (`&rarr;`)
  
 ### Action Symbols (optional)
 - do:add: ➕
+- do:remove: ✘
 - do:say: 🗣
-- do:play: ◀
+- do:play: 🔈
+- do:stop: ◾
+- do:replace 'id1' ⬅ 'id2'
+- do:detect: 👁
 - ...
 
 ## Sample Diagrams
