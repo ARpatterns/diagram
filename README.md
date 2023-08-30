@@ -42,8 +42,8 @@ All rules in a block are loaded and installed in sequence, yet not (all) execute
 Dynamically loaded rules may be called hierarchically leading to nested blocks. (`>`, `>>`, ...)
 
 ```markdown
- | on:command | &rarr; | do:detect:feature |
- |---|---|---|
+| on:command | &rarr; | do:detect:feature |
+|---|---|---|
  
 > Install feature detector &larr; "chair" 👁
 > | _on:detect_ | &rarr; | _do:execute:op_ |
