@@ -67,7 +67,7 @@ Dynamically loaded rules may be called hierarchically leading to nested blocks. 
 ### Condition Symbol
 - always true: &rarr; (`&rarr;`)
  
-### Action Symbols (optional)
+### Reaction Symbols (optional)
 - do:add: ➕
 - do:remove: ✘
 - do:say: 🗣
