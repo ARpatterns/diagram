@@ -9,18 +9,18 @@
 ### ECA Block
 
 ```markdown
-| Event |  Condition | Action |
+| Event | Condition | Action |
  |---|---|---|
 > changed state or reaction
 ```
 
-| Event |  Condition | Action |
+| Event | Condition | Action |
  |---|---|---|
 > changed state or reaction
 
 ### ECA Rule Symbols
 
-| on/in/as:___ |  if:___ | do:___ |
+| on/in/as:___ | if:___ | do:___ |
  |---|---|---|
 
 ### Text Styles
@@ -45,7 +45,7 @@ Dynamically loaded rules may be called hierarchically leading to nested blocks. 
 |---|---|---|
 
 > &darr; _do:run_ &larr; _on:response_ ••• $SERVER/detectors/detectMarker.json
-> | on:command |  &rarr; | do:detect:image |
+> | on:command | &rarr; | do:detect:image |
 > |---|---|---|
 > 
 >> Install image detector 0.1x0.1 &larr; _on:response_  •••  marker.png 👁
@@ -71,7 +71,6 @@ Dynamically loaded rules may be called hierarchically leading to nested blocks. 
 - do:stop: ◾
 - do:replace 'id1' ⬅ 'id2'
 - do:detect: 👁
-- ...
 
 ## Sample Diagrams
 
@@ -92,7 +91,7 @@ Dynamically loaded rules may be called hierarchically leading to nested blocks. 
 **Request-Response Pattern**
 
 ```markdown
- | on:command |  &rarr; | do:detect:feature |
+ | on:command | &rarr; | do:detect:feature |
  |---|---|---|
  
 > Install feature detector &larr; "chair" 👁
@@ -103,7 +102,7 @@ Dynamically loaded rules may be called hierarchically leading to nested blocks. 
 > 
 ```
 
- | on:command |  &rarr; | do:detect:feature |
+ | on:command | &rarr; | do:detect:feature |
  |---|---|---|
  
 > Install feature detector &larr; "chair" 👁
