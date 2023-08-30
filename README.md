@@ -41,24 +41,28 @@ An action may dynamically load and run new rules. These rules are displayed as i
 All rules in a block are loaded and installed in sequence, yet not (all) executed at loading time, but triggered by their corresponding event.
 Dynamically loaded rules may be called hierarchically leading to nested blocks. (`>`, `>>`, ...)
 
-| at:start| &rarr; | do:request GET:JSON |
-|---|---|---|
-
-> &darr; _do:run_ &larr; _on:response_ ••• $SERVER/detectors/detectMarker.json
-> | on:command | &rarr; | do:detect:image |
+```markdown
+ | on:command | &rarr; | do:detect:feature |
+ |---|---|---|
+ 
+> Install feature detector &larr; "chair" 👁
+> | _on:detect_ | &rarr; | _do:execute:op_ |
 > |---|---|---|
 > 
->> Install image detector 0.1x0.1 &larr; _on:response_  •••  marker.png 👁
->> | _on:detect_ | &rarr; | _do:add to AR anchor_ |
->> |---|---|---|
->> 
->>> 'scene.3D' ➕
->> 
->> | _as:stated_ | _if:`function('scene.3D', 'visible') == false`_ | _do:remove_ |
->> |---|---|---|
->> 
->>> 'scene.3D' ✘
+> > `function('I found a chair', 'say')`  
 > 
+```
+
+ | on:command | &rarr; | do:detect:feature |
+ |---|---|---|
+ 
+> Install feature detector &larr; "chair" 👁
+> | _on:detect_ | &rarr; | _do:execute:op_ |
+> |---|---|---|
+> 
+> > `function('I found a chair', 'say')`  
+>
+
 
 ### Condition Symbol
 - always true: &rarr; (`&rarr;`)
@@ -91,23 +95,41 @@ Dynamically loaded rules may be called hierarchically leading to nested blocks. 
 **XYZ Pattern**
 
 ```markdown
- | on:command | &rarr; | do:detect:feature |
- |---|---|---|
- 
-> Install feature detector &larr; "chair" 👁
-> | _on:detect_ | &rarr; | _do:execute:op_ |
+| at:start| &rarr; | do:request GET:JSON |
+|---|---|---|
+
+> &darr; _do:run_ &larr; _on:response_ ••• $SERVER/detectors/detectMarker.json
+> | on:command | &rarr; | do:detect:image |
 > |---|---|---|
 > 
-> > `function('I found a chair', 'say')`  
-> 
+>> Install image detector 0.1x0.1 &larr; _on:response_  •••  marker.png 👁
+>> | _on:detect_ | &rarr; | _do:add to AR anchor_ |
+>> |---|---|---|
+>> 
+>>> 'scene.3D' ➕
+>> 
+>> | _as:stated_ | _if:`function('scene.3D', 'visible') == false`_ | _do:remove_ |
+>> |---|---|---|
+>> 
+>>> 'scene.3D' ✘
+>
 ```
 
- | on:command | &rarr; | do:detect:feature |
- |---|---|---|
- 
-> Install feature detector &larr; "chair" 👁
-> | _on:detect_ | &rarr; | _do:execute:op_ |
+| at:start| &rarr; | do:request GET:JSON |
+|---|---|---|
+
+> &darr; _do:run_ &larr; _on:response_ ••• $SERVER/detectors/detectMarker.json
+> | on:command | &rarr; | do:detect:image |
 > |---|---|---|
 > 
-> > `function('I found a chair', 'say')`  
->
+>> Install image detector 0.1x0.1 &larr; _on:response_  •••  marker.png 👁
+>> | _on:detect_ | &rarr; | _do:add to AR anchor_ |
+>> |---|---|---|
+>> 
+>>> 'scene.3D' ➕
+>> 
+>> | _as:stated_ | _if:`function('scene.3D', 'visible') == false`_ | _do:remove_ |
+>> |---|---|---|
+>> 
+>>> 'scene.3D' ✘
+> 
