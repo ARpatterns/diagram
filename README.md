@@ -26,7 +26,7 @@
 > | _on:detect_ | &rarr; | _do:execute:op_ |
 > |---|---|---|
 > 
-> > function('I found a chair', 'say') ◀  
+> > ``function('I found a chair', 'say')`  
 > 
 ```
 
@@ -37,7 +37,7 @@
 > | _on:detect_ | &rarr; | _do:execute:op_ |
 > |---|---|---|
 > 
-> > function('I found a chair', 'say') ◀  
+> > `function('I found a chair', 'say')`  
 >
 
 ## Markdown Mappings for AR Patterns Diaagram
@@ -70,6 +70,7 @@
 ### Action Symbols (optional)
 - do:add: ➕
 - do:say: 🗣
+- do:play: ◀
 - ...
 
 
