@@ -40,7 +40,7 @@
 > > `function('I found a chair', 'say')`  
 >
 
-## Markdown Mappings for AR Patterns Diaagram
+## Markdown Mappings for AR Pattern Diagrams
 
 ### ECA Block
 
