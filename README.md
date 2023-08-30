@@ -31,7 +31,7 @@
 
 An action may dynamically load and run new rules. These rules are displayed as indented blockquote. 
 All rules in a block are loaded and installed in sequence, yet not (all) executed at loading time, but triggered by their corresponding event.
-Dynamically loaded rules may be called hierarchically leading to nested blocks. (`>`)
+Dynamically loaded rules may be called hierarchically leading to nested blocks. (`>`, `>>`, ...)
 
 | at:start| &rarr; | do:request GET:JSON |
 |---|---|---|
