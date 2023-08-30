@@ -1,5 +1,42 @@
 # AR Pattern Diagram
 
+## Markdown Mappings for AR Pattern Diagrams
+
+### ECA Block
+
+| Event |  Condition | Action |
+ |---|---|---|
+> changed state or reaction
+
+### ECA Rule Symbols
+
+| on/in/as:___ |  if:___ | do:___ |
+ |---|---|---|
+
+### Text Styles
+- __Bold__: Text in the ECA block (need no MD coding, because first row in table is bold anyway; otherwise ``__Bold__``)
+- `Courier`: predicates, expressions and program code executed at runtime  (`` `Courier` ``)
+- _Italic_: ECA rules that are not explicitly coded but are added automatically (`_Italic_`)
+
+
+### Block Quoting
+
+
+### Text Quoting
+
+- 'Single Quotes': identifiers
+- "Double Quotes": text strings
+- None: all other texts
+
+### Condition Symbol
+- always true: &rarr; (`&rarr;`)
+ 
+### Action Symbols (optional)
+- do:add: ➕
+- do:say: 🗣
+- do:play: ◀
+- ...
+
 ## Sample Diagrams
 
 **Conditional Reaction Pattern**
@@ -39,43 +76,3 @@
 > 
 > > `function('I found a chair', 'say')`  
 >
-
-## Markdown Mappings for AR Pattern Diagrams
-
-### ECA Block
-
-| Event |  Condition | Action |
- |---|---|---|
-> changed state or reaction
-
-### ECA Rule Symbols
-
-| on/in/as:___ |  if:___ | do:___ |
- |---|---|---|
-> changed state or reaction
-
-### Text Styles
-- __Bold__: Text in the ECA block (need no MD coding, because first row in table is bold anyway; otherwise ``__Bold__``)
-- `Courier`: predicates, expressions and program code executed at runtime  (`` `Courier` ``)
-- _Italic_: ECA rules that are not explicitly coded but are added automatically (`_Italic_`)
--  
-
-### Block Quoting
-
-
-### Text Quoting
-
-- 'Single Quotes': identifiers
-- "Double Quotes": text strings
-- None: all other texts
-
-### Condition Symbol
-- always true: &rarr; (`&rarr;`)
-- 
-### Action Symbols (optional)
-- do:add: ➕
-- do:say: 🗣
-- do:play: ◀
-- ...
-
-
