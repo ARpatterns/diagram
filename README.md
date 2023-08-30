@@ -8,6 +8,12 @@
 
 ### ECA Block
 
+```markdown
+| Event |  Condition | Action |
+ |---|---|---|
+> changed state or reaction
+```
+
 | Event |  Condition | Action |
  |---|---|---|
 > changed state or reaction
