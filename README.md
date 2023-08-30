@@ -50,7 +50,7 @@
 
 
 ### Text Styles
-- __Bold__: Text in the ECA block (``__Bold__``)
+- __Bold__: Text in the ECA block (need no MD coding, because first row is bold; anyway, otherwise ``__Bold__``)
 - `Courier`: predicates, expressions and program code executed at runtime  (`` `Courier` ``)
 - _Italic_: ECA rules that are not explicitly coded but are added automatically (`_Italic_`)
 -  
