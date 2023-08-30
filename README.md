@@ -35,6 +35,11 @@
 - "Double Quotes": text strings
 - None: all other texts
 
+
+### Condition Symbol
+- always true: &rarr; (`&rarr;`)
+
+
 ### Block Quoting
 
 An action may dynamically load and run new rules. These rules are displayed as indented blockquote. 
@@ -63,9 +68,6 @@ Dynamically loaded rules may be called hierarchically leading to nested blocks. 
 > > `function('I found a chair', 'say')`  
 >
 
-
-### Condition Symbol
-- always true: &rarr; (`&rarr;`)
  
 ### Reaction Symbols (optional)
 - do:add: ➕
