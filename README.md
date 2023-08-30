@@ -10,18 +10,18 @@
 
 ```markdown
 | Event | Condition | Action |
- |---|---|---|
+|---|---|---|
 > changed state or reaction
 ```
 
 | Event | Condition | Action |
- |---|---|---|
+|---|---|---|
 > changed state or reaction
 
 ### ECA Rule Symbols
 
 | on/in/as:___ | if:___ | do:___ |
- |---|---|---|
+|---|---|---|
 
 ### Text Styles
 - __Bold__: Text in the ECA block (need no MD coding, because first row in table is bold anyway; otherwise ``__Bold__``)
