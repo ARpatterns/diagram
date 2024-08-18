@@ -54,7 +54,7 @@ Dynamically loaded rules may be called hierarchically leading to nested blocks. 
 > | _on:detect_ | &rarr; | _do:execute:op_ |
 > |---|---|---|
 > 
-> > `function('I found a chair', 'say')`  
+> > `say('I found a chair')`  
 > 
 ```
 
@@ -65,7 +65,7 @@ Dynamically loaded rules may be called hierarchically leading to nested blocks. 
 > | _on:detect_ | &rarr; | _do:execute:op_ |
 > |---|---|---|
 > 
-> > `function('I found a chair', 'say')`  
+> > `say('I found a chair')`  
 >
 
  
@@ -110,7 +110,7 @@ Dynamically loaded rules may be called hierarchically leading to nested blocks. 
 >> 
 >>> 'scene.3D' ➕
 >> 
->> | _as:stated_ | _if:`function('scene.3D', 'visible') == false`_ | _do:remove_ |
+>> | _as:stated_ | _if:`visible('scene.3D') == false`_ | _do:remove_ |
 >> |---|---|---|
 >> 
 >>> 'scene.3D' ✘
@@ -130,7 +130,7 @@ Dynamically loaded rules may be called hierarchically leading to nested blocks. 
 >> 
 >>> 'scene.3D' ➕
 >> 
->> | _as:stated_ | _if:`function('scene.3D', 'visible') == false`_ | _do:remove_ |
+>> | _as:stated_ | _if:`visible('scene.3D') == false`_ | _do:remove_ |
 >> |---|---|---|
 >> 
 >>> 'scene.3D' ✘
