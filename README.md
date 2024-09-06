@@ -2,9 +2,43 @@
 
 ## Introduction
 
-... todo
+In order to provide a compact visualization of active Event-Condition-Action (ECA) rules we developed a diagram representation consisting of rule-reaction blocks. AR pattern diagrams can be seen as a kind of pseudo code representation for Augmented Reality programs. The first line of a rule-reaction block in such a diagram shows the active rule as an Event-Condition-Action triple. Following the rule is a blockquoted line that depicts the changed state as reaction. 
+
+| Event | Condition | Action |
+|---|---|---|
+> changed state or reaction
+
+If no condition is defined, it evaluates to true, and the diagram shows an immediate execution arrow (&rarr;). 
+
+| Event | &rarr; | Action |
+|---|---|---|
+> changed state or reaction
+
+To illustrate the use of the diagram, consider the following example which presents an active rule triggered by a temporal event (in 20 seconds). If no item is found in the current AR session (the condition), the action will provide a voice feedback (the reaction) using a text-to-speech system.
+
+| in:20 sec | if:`items.@count == 0`| do:say |
+|---|---|---|
+> "You may add an item!" 🗣
+
+An action may dynamically load and run new consecutive rules. These rules are displayed as indented block quotes consisting of one or several sequential rules. All rules in a block are loaded and installed in sequence, yet not (all) executed at loading time, but triggered by their corresponding event. 
+
+| on:start |  &rarr;  | do:request |
+ |---|---|---|
+> &darr; _do:run_ &larr; _on:response_ ••• $SERVER/actions/doit.json 
+> | on:command |  &rarr; | do:assign |
+> |---|---|---|
+>> `data.flag = 1`
+> 
+> | in:5 sec |  &rarr; | do:assign |
+> |---|---|---|
+>> `data.flag = 0`
+> 
 
 ## Markdown Mappings for AR Pattern Diagrams
+
+The AR pattern diagram has been designed to be technology-agnostic. It can be created straightforward in the Markdown language and rendered as styled text. With this easy to use solution, AR patterns may be seamlessly incorporated into the authoring process, ultimately improving both documentation and communication of AR programs.
+
+The mapping to Markdown used to create AR Pattern diagrams is defined in the following by the Markdown code and its rendering.
 
 ### ECA Block
 
@@ -33,7 +67,7 @@
 
 - 'Single Quotes': identifiers
 - "Double Quotes": text strings
-- None: all other texts
+- None: all other text
 
 
 ### Condition Symbol
@@ -42,14 +76,12 @@
 
 ### Block Quoting
 
-An action may dynamically load and run new rules. These rules are displayed as indented blockquote. 
-All rules in a block are loaded and installed in sequence, yet not (all) executed at loading time, but triggered by their corresponding event.
+An action may dynamically load and run new consecutive rules. These rules are displayed as indented block quotes consisting of one or several sequential rules. 
 Dynamically loaded rules may be called hierarchically leading to nested blocks. (`>`, `>>`, ...)
 
 ```markdown
 | on:command | &rarr; | do:detect:feature |
 |---|---|---|
- 
 > Install feature detector &larr; "chair" 👁
 > | _on:detect_ | &rarr; | _do:execute:op_ |
 > |---|---|---|
@@ -60,7 +92,6 @@ Dynamically loaded rules may be called hierarchically leading to nested blocks. 
 
  | on:command | &rarr; | do:detect:feature |
  |---|---|---|
- 
 > Install feature detector &larr; "chair" 👁
 > | _on:detect_ | &rarr; | _do:execute:op_ |
 > |---|---|---|
@@ -94,12 +125,11 @@ Dynamically loaded rules may be called hierarchically leading to nested blocks. 
 
 ---
 
-**XYZ Pattern**
+**AR Scenario using several AR Patterns**
 
 ```markdown
 | at:start| &rarr; | do:request GET:JSON |
 |---|---|---|
-
 > &darr; _do:run_ &larr; _on:response_ ••• $SERVER/detectors/detectMarker.json
 > | on:command | &rarr; | do:detect:image |
 > |---|---|---|
@@ -117,9 +147,8 @@ Dynamically loaded rules may be called hierarchically leading to nested blocks. 
 >
 ```
 
-| at:start| &rarr; | do:request GET:JSON |
+| on:start| &rarr; | do:request GET:JSON |
 |---|---|---|
-
 > &darr; _do:run_ &larr; _on:response_ ••• $SERVER/detectors/detectMarker.json
 > | on:command | &rarr; | do:detect:image |
 > |---|---|---|
