@@ -5,7 +5,7 @@
 AR pattern diagrams can be seen as a kind of pseudo code representation for Augmented Reality functionalities. They work as a rough documentation and help to comprehend the triggering, decision control, and execution mechanism of AR behavior.
 AR experiences are heavily driven by elements detected in the real world, without having control over their occurrence and timing during the creation process. The reactive behavior and dynamic scenography of AR/MR experiences are therefore modeled as event-driven reactions described as [Event-Condition-Action](https://github.com/ARpatterns/catalog/tree/main/eca) (ECA) rules that perform an action in response to an event, provided that certain conditions are met. In the context of AR patterns, ECA rules build a generic technology-agnostic abstraction of the reactive behavior of AR software systems.
 
-Together with visual illustrations of the scene, AR pattern diagrams help teams stay productive by making it easier to: 
+Together with visual [illustrations](https://arpatterns.dev/illustrations) of the scene, AR pattern diagrams help teams stay productive by making it easier to: 
 - Navigate AR scenarios without reading source code.
 - Plan out new features before programming.
 - Quickly onboard new team members.
@@ -32,6 +32,21 @@ To illustrate the use of the diagram, consider the following example which prese
 |---|---|---|
 > "You may add an item!" 🗣
 
+Several ECA rules may be loaded and installed at the same time. They are shown as sequences of rule-reaction blocks. Be aware that they are installed at the same time but may not be triggered at the that time.
+
+| on:stable |  &rarr; | do:add ahead 0.0 1.0 -0.9 |
+|---|---|---|
+> 'red.box' ➕
+
+| on:stated | if:`visible('red.box') == true`| do:say |
+|---|---|---|
+> "you see a red box" 🗣
+ 
+| on:stated | if:`visible('red.box') == false`| do:say |
+|---|---|---|
+> "now you don't" 🗣
+
+
 An action may dynamically load and run new consecutive rules. These rules are displayed as indented block quotes consisting of one or several sequential rules. All rules in a block are loaded and installed in sequence, yet not (all) executed at loading time, but triggered by their corresponding event. 
 
 | on:start |  &rarr;  | do:request |
@@ -46,7 +61,7 @@ An action may dynamically load and run new consecutive rules. These rules are di
 >> `data.flag = 0`
 > 
 
-## How to write an AR Pattern diagram?
+## How to write an AR Pattern Diagram?
 1. List the items that will augment the real world as media assets (e.g., 3D models, parametric geometries, images, audio files, text). These items should then be taggled by ECA rules.
 2. Enumerate potential events that may occur during the AR session and will trigger behavior and interactivity. See typical [Events in AR applications](https://github.com/ARpatterns/catalog/blob/main/eca/events.md).
 3. Arrange the enumerated items and events into Event-Condition-Action rules that will manipulate media items, run-time data, and system settings. 
