@@ -2,7 +2,19 @@
 
 ## Introduction
 
-In order to provide a compact visualization of active Event-Condition-Action (ECA) rules we developed a diagram representation consisting of rule-reaction blocks. AR pattern diagrams can be seen as a kind of pseudo code representation for Augmented Reality programs. The first line of a rule-reaction block in such a diagram shows the active rule as an Event-Condition-Action triple. Following the rule is a blockquoted line that depicts the changed state as reaction. 
+AR pattern diagrams can be seen as a kind of pseudo code representation for Augmented Reality functionalities. They work as a rough documentation and help to comprehend the triggering, decision control, and execution mechanism of AR behavior.
+AR experiences are heavily driven by elements detected in the real world, without having control over their occurrence and timing during the creation process. The reactive behavior and dynamic scenography of AR/MR experiences are therefore modeled as event-driven reactions described as [Event-Condition-Action](https://github.com/ARpatterns/catalog/tree/main/eca) (ECA) rules that perform an action in response to an event, provided that certain conditions are met. In the context of AR patterns, ECA rules build a generic technology-agnostic abstraction of the reactive behavior of AR software systems.
+
+Together with visual illustrations of the scene, AR pattern diagrams help teams stay productive by making it easier to: 
+- Navigate AR scenarios without reading source code.
+- Plan out new features before programming.
+- Quickly onboard new team members.
+- Collaborate with technical and non-technical team members.
+
+
+## Rule-Reaction Block
+
+In order to provide a compact visualization of active Event-Condition-Action (ECA) rules we developed a diagram representation consisting of rule-reaction blocks. The first line of a rule-reaction block in such a diagram shows the active rule as an Event-Condition-Action triple. Below the rule a blockquoted line follows which depicts the changed state as reaction. 
 
 | Event | Condition | Action |
 |---|---|---|
@@ -33,6 +45,16 @@ An action may dynamically load and run new consecutive rules. These rules are di
 > |---|---|---|
 >> `data.flag = 0`
 > 
+
+## How to write an AR Pattern diagram?
+1. List the items that will augment the real world as media assets (e.g., 3D models, parametric geometries, images, audio files, text). These items should then be taggled by ECA rules.
+2. Enumerate potential events that may occur during the AR session and will trigger behavior and interactivity. See typical [Events in AR applications](https://github.com/ARpatterns/catalog/blob/main/eca/events.md).
+3. Arrange the enumerated items and events into Event-Condition-Action rules that will manipulate media items, run-time data, and system settings. 
+4. Whenever possible use the generic action identifiers listed in [Actions in AR Applications](https://github.com/ARpatterns/catalog/blob/main/eca/actions.md)
+5. Depict the reaction of the triggered action.
+6. Write down the rule-reaction blocks in [Markdown](https://www.markdownguide.org) by applying the corresponding [styling](#markdown-mappings-for-ar-pattern-diagrams). 
+7. Integrate and render the diagram as embedded documentation, e.g., in README files within github repositiories or in Web-based technical documentations. 
+
 
 ## Markdown Mappings for AR Pattern Diagrams
 
