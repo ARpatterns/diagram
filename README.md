@@ -67,11 +67,11 @@ An action may dynamically load and run new consecutive rules. These rules are di
 3. Arrange the enumerated items and events into Event-Condition-Action rules that will manipulate media items, run-time data, and system settings. 
 4. Whenever possible use the generic action identifiers listed in [Actions in AR Applications](https://github.com/ARpatterns/catalog/blob/main/eca/actions.md)
 5. Depict the reaction of the triggered action.
-6. Write down the rule-reaction blocks in [Markdown](https://www.markdownguide.org) by applying the corresponding [styling](#markdown-mappings-for-ar-pattern-diagrams). 
-7. Integrate and render the diagram as embedded documentation, e.g., in README files within github repositiories or in Web-based technical documentations. 
+6. Write down the rule-reaction blocks in [Markdown](https://www.markdownguide.org) by applying the corresponding [stylings](#markdown-stylings-for-ar-pattern-diagrams). 
+7. Integrate and render the diagram as embedded documentation, e.g., in README files (see [template](https://github.com/ARpatterns/catalog/blob/main/templates/Scenario_README.md)) within github repositiories or in Web-based technical documentations. 
 
 
-## Markdown Mappings for AR Pattern Diagrams
+## Markdown Stylings for AR Pattern Diagrams
 
 The AR pattern diagram has been designed to be technology-agnostic. It can be created straightforward in the Markdown language and rendered as styled text. With this easy to use solution, AR patterns may be seamlessly incorporated into the authoring process, ultimately improving both documentation and communication of AR programs.
 
