@@ -1,20 +1,19 @@
-# AR Pattern Diagram
+# ECA Diagram
 
 ## Introduction
 
-AR pattern diagrams can be seen as a kind of pseudo code representation for Augmented Reality functionalities. They work as a rough documentation and help to comprehend the triggering, decision control, and execution mechanism of AR behavior.
-AR experiences are heavily driven by elements detected in the real world, without having control over their occurrence and timing during the creation process. The reactive behavior and dynamic scenography of AR/MR experiences are therefore modeled as event-driven reactions described as [Event-Condition-Action](https://github.com/ARpatterns/catalog/tree/main/eca) (ECA) rules that perform an action in response to an event, provided that certain conditions are met. In the context of AR patterns, ECA rules build a generic technology-agnostic abstraction of the reactive behavior of AR software systems.
+ECA diagrams can be seen as a kind of pseudo code representation for Augmented Reality functionalities. They work as a rough documentation and help to comprehend the triggering, decision control, and execution mechanism of AR behavior.
+AR experiences are heavily driven by elements detected in the real world, without having control over their occurrence and timing during the creation process. This reactive behavior and dynamic scenography of AR/MR experiences are therefore modeled as event-driven reactions described as [Event-Condition-Action](https://github.com/ARpatterns/catalog/tree/main/eca) (ECA) rules that perform an action in response to an event, provided that certain conditions are met. In the context of AR patterns, ECA rules build a generic technology-agnostic abstraction of the reactive behavior of AR software systems.
 
-Together with visual [illustrations](https://arpatterns.dev/illustrations) of the scene, AR pattern diagrams help teams stay productive by making it easier to: 
+Together with visual [illustrations](https://arpatterns.dev/illustrations) of the scene, ECA diagrams help teams stay productive by making it easier to: 
 - Navigate AR scenarios without reading source code.
 - Plan out new features before programming.
 - Quickly onboard new team members.
 - Collaborate with technical and non-technical team members.
 
-
 ## Rule-Reaction Block
 
-In order to provide a compact visualization of active Event-Condition-Action (ECA) rules we developed a diagram representation consisting of rule-reaction blocks. The first line of a rule-reaction block in such a diagram shows the active rule as an Event-Condition-Action triple. Below the rule a blockquoted line follows which depicts the changed state as reaction. 
+In order to provide a compact visualization of active Event-Condition-Action (ECA) rules we developed a diagram representation consisting of rule-reaction blocks using markdown syntax. The first line of a rule-reaction block in such a diagram shows the active rule as an Event-Condition-Action triple. Below the rule follows a blockquoted line which depicts the changed state as reaction. 
 
 | Event | Condition | Action |
 |---|---|---|
@@ -46,7 +45,6 @@ Several ECA rules may be loaded and installed at the same time. They are shown a
 |---|---|---|
 > "now you don't" 🗣
 
-
 An action may dynamically load and run new consecutive rules. These rules are displayed as indented block quotes consisting of one or several sequential rules. All rules in a block are loaded and installed in sequence, yet not (all) executed at loading time, but triggered by their corresponding event. 
 
 | on:start |  &rarr;  | do:request |
@@ -61,21 +59,21 @@ An action may dynamically load and run new consecutive rules. These rules are di
 >> `data.flag = 0`
 > 
 
-## How to write an AR Pattern Diagram?
+## How to write an ECA Diagram?
 1. List the items that will augment the real world as media assets (e.g., 3D models, parametric geometries, images, audio files, text). These items should then be taggled by ECA rules.
 2. Enumerate potential events that may occur during the AR session and will trigger behavior and interactivity. See typical [Events in AR applications](https://github.com/ARpatterns/catalog/blob/main/eca/events.md).
 3. Arrange the enumerated items and events into Event-Condition-Action rules that will manipulate media items, run-time data, and system settings. 
 4. Whenever possible use the generic action identifiers listed in [Actions in AR Applications](https://github.com/ARpatterns/catalog/blob/main/eca/actions.md)
 5. Depict the reaction of the triggered action.
-6. Write down the rule-reaction blocks in [Markdown](https://www.markdownguide.org) by applying the corresponding [stylings](#markdown-stylings-for-ar-pattern-diagrams). 
+6. Write down the rule-reaction blocks in [Markdown](https://www.markdownguide.org) by applying the corresponding [stylings](#markdown-stylings-for-eca-diagrams). 
 7. Integrate and render the diagram as embedded documentation, e.g., in README files (see [template](https://github.com/ARpatterns/catalog/blob/main/templates/Scenario_README.md)) within github repositiories or in Web-based technical documentations. 
 
 
-## Markdown Stylings for AR Pattern Diagrams
+## Markdown Stylings for ECA Diagrams
 
-The AR pattern diagram has been designed to be technology-agnostic. It can be created straightforward in the Markdown language and rendered as styled text. With this easy to use solution, AR patterns may be seamlessly incorporated into the authoring process, ultimately improving both documentation and communication of AR programs.
+The ECA diagram has been designed to be technology-agnostic. It can be created straightforward in the Markdown language and rendered as styled text. With this easy to use solution, AR patterns may be seamlessly incorporated into the authoring process, ultimately improving both documentation and communication of AR programs.
 
-The mapping to Markdown used to create AR Pattern diagrams is defined in the following by the Markdown code and its rendering.
+The mapping to Markdown used to create ECA diagrams is defined in the following by the Markdown code and its rendering.
 
 ### ECA Block
 
@@ -95,9 +93,9 @@ The mapping to Markdown used to create AR Pattern diagrams is defined in the fol
 |---|---|---|
 
 ### Text Styles
-- __Bold__: Text in the ECA block (need no MD coding, because first row in table is bold anyway; otherwise ``__Bold__``)
+- __Bold__: Text in the ECA block (needs no markdown styling, because first row in table is bold anyway; otherwise ``__Bold__``)
 - `Courier`: predicates, expressions and program code executed at runtime  (`` `Courier` ``)
-- _Italic_: ECA rules that are not explicitly coded but are added automatically (`_Italic_`)
+- _Italic_: ECA rules that are not explicitly coded but are run automatically by the AR application (`_Italic_`)
 
 
 ### Text Quoting
@@ -113,7 +111,7 @@ The mapping to Markdown used to create AR Pattern diagrams is defined in the fol
 
 ### Block Quoting
 
-An action may dynamically load and run new consecutive rules. These rules are displayed as indented block quotes consisting of one or several sequential rules. 
+An action may dynamically load and run new consecutive ECA rules. These rules are displayed as indented block quotes consisting of one or several sequential ECA rules. 
 Dynamically loaded rules may be called hierarchically leading to nested blocks. (`>`, `>>`, ...)
 
 ```markdown
