@@ -144,7 +144,7 @@ Dynamically loaded rules may be called hierarchically leading to nested blocks. 
 - do:replace 'id1' ⬅ 'id2'
 - do:detect: 👁
 
-## Sample Diagrams
+## Samples of ECA Diagrams
 
 **Conditional Reaction Pattern**
 
